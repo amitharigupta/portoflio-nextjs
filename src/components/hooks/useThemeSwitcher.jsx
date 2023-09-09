@@ -10,7 +10,7 @@ const useThemeSwitcher = () => {
 
         const handleChange = () => {
             if(usePref) {
-                let check = usePref === 'dark' ? "dark" : "light";
+                let check = usePref === "dark" ? "dark" : "light";
                 setMode(check);
                 if(check === "dark") {
                     document.documentElement.classList.add("dark");
@@ -37,12 +37,13 @@ const useThemeSwitcher = () => {
         if(mode === "dark") {
             window.localStorage.setItem("theme", "dark");
             document.documentElement.classList.add("dark");
-        } else {
+        } 
+        if(mode === "light") {
             window.localStorage.setItem("theme", "light");
-            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("dark");
         }
     }, [mode]);
-  return [mode, setMode]
+  return [mode, setMode];
 }
 
 export default useThemeSwitcher

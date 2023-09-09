@@ -1,8 +1,13 @@
+import TransitionEffect from '@/components/TransitionEffect'
 import React from 'react'
 
 const articles = () => {
   return (
-    <div>articles</div>
+
+    <>
+    <TransitionEffect />
+      <div>articles</div>
+    </>
   )
 }
 
