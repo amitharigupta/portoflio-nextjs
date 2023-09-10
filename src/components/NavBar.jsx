@@ -50,7 +50,9 @@ const NavBar = () => {
           <CustomLink href={"/"} title={"Home"} className="mr-4" />
           <CustomLink href={"/about"} title={"About"} className="mx-4" />
           <CustomLink href={"/projects"} title={"Projects"} className="mx-4" />
-          <CustomLink href={"/articles"} title={"Articles"} className="ml-4" />
+          {/* <CustomLink href={"/articles"} title={"Articles"} className="ml-4" /> */}
+          <CustomLink href={"/contact"} title={"Contact"} className="ml-4" />
+          {/* <CustomLink href={"/testimonials"} title={"Testimonials"} className="ml-4" /> */}
         </nav>
         <nav className="flex items-center justify-center flex-wrap">
           <motion.a href={"https://twitter.com"} target="_blank" whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className="w-6 mr-3">
@@ -85,7 +87,9 @@ const NavBar = () => {
           <CustomMobileLink href={"/"} title={"Home"} className="" toggle={handleClick} />
           <CustomMobileLink href={"/about"} title={"About"} className="" toggle={handleClick} />
           <CustomMobileLink href={"/projects"} title={"Projects"} className="" toggle={handleClick} />
-          <CustomMobileLink href={"/articles"} title={"Articles"} className="" toggle={handleClick} />
+          {/* <CustomMobileLink href={"/articles"} title={"Articles"} className="" toggle={handleClick} /> */}
+          <CustomMobileLink href={"/contact"} title={"Contact"} className="" toggle={handleClick} />
+          {/* <CustomMobileLink href={"/testimonials"} title={"Testimonials"} className="" toggle={handleClick} /> */}
         </nav>
         <nav className="flex items-center justify-center flex-wrap">
           <motion.a href={"https://twitter.com"} target="_blank" whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className="w-6 mr-3">
