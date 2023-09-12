@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 const dotenv = require('dotenv');
 dotenv.config();
 
-const email = process.env.EMAIL;
+const email = process.env.EMAIL || "amitgt9967@gmail.com";
 const pass = process.env.EMAIL_PASS;
 
 
