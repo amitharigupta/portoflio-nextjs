@@ -18,8 +18,10 @@ import {
     Input,
     Text,
     Textarea,
-    useToast,
 } from "@chakra-ui/react";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const initValues = {
     name: "",
@@ -35,7 +37,6 @@ const initState = {
 }
 
 const contact = () => {
-    const toast = useToast();
     const [state, setState] = useState(initState);
     const [touched, setTouched] = useState({});
 
@@ -62,12 +63,7 @@ const contact = () => {
       await sendContactForm(values);
       setTouched({});
       setState(initState);
-      toast({
-        title: "Message sent.",
-        status: "success",
-        duration: 2000,
-        position: "top",
-      });
+      toast("Message Sent.");
     } catch (error) {
       setState((prev) => ({
         ...prev,
@@ -114,6 +110,7 @@ const contact = () => {
                                 <FormErrorMessage >Required</FormErrorMessage>
                             </FormControl>
                             <Button variant="outline" colorScheme={"blue"} disabled={!values.name || !values.email || !values.subject || !values.message} onClick={onSubmit} isLoading={isLoading}>Submit</Button>
+                            <ToastContainer />
                         </div>
                         <div className="col-span-3 mt-[-100px] flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
                             <Image
