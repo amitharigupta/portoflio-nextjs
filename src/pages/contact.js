@@ -36,7 +36,7 @@ const initState = {
     values: initValues
 }
 
-const contact = () => {
+const Contact = () => {
     const [state, setState] = useState(initState);
     const [touched, setTouched] = useState({});
 
@@ -127,4 +127,4 @@ const contact = () => {
     )
 }
 
-export default contact
+export default Contact
