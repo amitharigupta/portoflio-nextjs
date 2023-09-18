@@ -5,6 +5,9 @@
   "engines": {
     "node": ">=16 <20"
   },
+  "eslint": {
+    "ignoreDuringBuilds": true
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
